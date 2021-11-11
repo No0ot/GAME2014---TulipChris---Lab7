@@ -12,5 +12,9 @@ public class DeathPlaneController : MonoBehaviour
         {
             collision.transform.position = playerSpawnPoint.position;
         }
+        else if(collision.gameObject.CompareTag("Enemy"))
+        {
+            collision.gameObject.SetActive(false);
+        }
     }
 }
